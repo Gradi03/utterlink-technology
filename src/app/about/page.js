@@ -13,13 +13,12 @@ const About = () => {
         <title>About Us | Utterlink - Connectivity & Security Solutions</title>
         <meta
           name="description"
-          content="Learn about Utterlink's journey, our mission to provide exceptional connectivity and security solutions, and the team behind our success."
+          content="Learn about Utterlink&rsquo;s journey, our mission to provide exceptional connectivity and security solutions, and the team behind our success."
         />
         <meta
           name="keywords"
           content="about Utterlink, connectivity company, security solutions provider, Cape Town tech company"
         />
-        {/* You can add other SEO meta tags as needed */}
       </Head>
       <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
@@ -56,16 +55,15 @@ const About = () => {
                 comprehensive connectivity and security solutions.
               </p>
               <p className="mb-8 md:mb-10 lg:mb-12 text-[#333333]">
-                Over the years, we've expanded our services to meet the growing
-                demands of our clients, always staying at the forefront of
-                technological advancements. Our commitment to quality,
+                Over the years, we&rsquo;ve expanded our services to meet the
+                growing demands of our clients, always staying at the forefront
+                of technological advancements. Our commitment to quality,
                 reliability, and exceptional customer service has earned us a
-                reputation as one of Cape Town's most trusted technology
+                reputation as one of Cape Town&rsquo;s most trusted technology
                 partners.
               </p>
             </motion.div>
 
-            {/* Image Section */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -82,12 +80,13 @@ const About = () => {
                   identity. We understand the unique needs and challenges of
                   this region and are committed to providing solutions that
                   empower our local community. From the bustling city center to
-                  the serene coastal suburbs, we're proud to serve Cape Town.
+                  the serene coastal suburbs, we&rsquo;re proud to serve Cape
+                  Town.
                 </p>
               </div>
               <div className="rounded-lg overflow-hidden shadow-md">
                 <Image
-                  src="/cape-town-view.jpg" // Replace with your actual image path
+                  src="/cape-town-view.jpg"
                   alt="Cape Town View"
                   width={600}
                   height={400}
@@ -108,7 +107,7 @@ const About = () => {
               </h2>
               <p className="mb-8 md:mb-10 lg:mb-12 text-[#333333]">
                 At Utterlink, we believe that connectivity is not just about
-                technology—it's about connecting people, businesses, and
+                technology—it&rsquo;s about connecting people, businesses, and
                 communities. Our mission is to bridge the digital divide by
                 providing reliable, high-quality connectivity and security
                 solutions that empower our clients to thrive in an increasingly

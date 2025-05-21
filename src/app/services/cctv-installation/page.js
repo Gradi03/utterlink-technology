@@ -58,10 +58,10 @@ const CCTVInstallation = () => {
                   Advanced Security Solutions
                 </h2>
                 <p className="mb-4 md:mb-6 text-[#333333]">
-                  In today's world, security is not a luxury but a necessity.
-                  CCTV systems provide an effective deterrent against crime,
-                  valuable evidence in case of incidents, and peace of mind
-                  knowing your property is under constant surveillance.
+                  In today&quot;s world, security is not a luxury but a
+                  necessity. CCTV systems provide an effective deterrent against
+                  crime, valuable evidence in case of incidents, and peace of
+                  mind knowing your property is under constant surveillance.
                 </p>
                 <p className="text-[#333333]">
                   Utterlink specializes in designing and installing cutting-edge
@@ -211,8 +211,8 @@ const CCTVInstallation = () => {
                     Weatherproof Options
                   </h3>
                   <p className="text-[#333333]">
-                    Durable outdoor cameras designed to withstand Cape Town's
-                    diverse weather conditions.
+                    Durable outdoor cameras designed to withstand Cape
+                    Town&quot;s diverse weather conditions.
                   </p>
                 </div>
               </div>
@@ -227,7 +227,7 @@ const CCTVInstallation = () => {
             className="bg-green-100 p-6 md:p-8 rounded-xl text-center max-w-4xl mx-auto" // Adjusted max-width for CTA
           >
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-green-600">
-              Ready to enhance your property's security?
+              Ready to enhance your property&quot;s security?
             </h2>
             <p className="mb-6 text-[#333333]">
               Contact our security experts today for a free consultation and

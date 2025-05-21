@@ -73,7 +73,7 @@ const FibreInstallation = () => {
                 <p className="mb-4 md:mb-6 text-[#333333]">
                   **Fiber optic internet** is the gold standard of connectivity,
                   offering unparalleled speeds, reliability, and performance.
-                  Whether you're streaming 4K content, gaming online, video
+                  Whether you&quot;re streaming 4K content, gaming online, video
                   conferencing, or running a business that depends on constant
                   connectivity, fiber delivers the speed and stability you need.
                 </p>

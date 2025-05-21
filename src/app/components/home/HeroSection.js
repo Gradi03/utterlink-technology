@@ -19,7 +19,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          Cape Town's Premier{" "}
+          Cape Town&rsquo;s Premier{" "}
           <span className="text-green-700">Connectivity Solutions</span>
         </motion.h1>
 

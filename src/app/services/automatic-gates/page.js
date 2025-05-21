@@ -159,7 +159,7 @@ const AutomaticGates = () => {
                   </h3>
                   <p className="text-[#333333]">
                     We work with you to design a gate system that complements
-                    your property's aesthetics while meeting your security
+                    your property&quot;s aesthetics while meeting your security
                     requirements and budget.
                   </p>
                 </div>

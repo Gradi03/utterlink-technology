@@ -39,8 +39,8 @@ const ElectricFencing = () => {
               Electric Fencing
             </h1>
             <p className="text-lg md:text-xl text-[#555555]">
-              Enhance your property's security with our professional electric
-              fence installation
+              Enhance your property&quot;s security with our professional
+              electric fence installation
             </p>
           </motion.div>
 
@@ -67,10 +67,10 @@ const ElectricFencing = () => {
                 </p>
                 <p className="text-[#333333]">
                   At Utterlink, we design and install electric fencing solutions
-                  that are tailored to your property's specific requirements.
-                  Our certified technicians ensure that all installations comply
-                  with safety regulations while providing maximum security
-                  effectiveness.
+                  that are tailored to your property&quot;s specific
+                  requirements. Our certified technicians ensure that all
+                  installations comply with safety regulations while providing
+                  maximum security effectiveness.
                 </p>
               </div>
               <motion.div
@@ -233,7 +233,7 @@ const ElectricFencing = () => {
             className="bg-green-100 p-6 md:p-8 rounded-xl text-center max-w-4xl mx-auto" // Adjusted max-width for CTA
           >
             <h2 className="text-xl md:text-2xl font-bold mb-4 text-green-600">
-              Ready to enhance your property's security?
+              Ready to enhance your property&quot;s security?
             </h2>
             <p className="mb-6 text-[#333333]">
               Contact our security experts today for a free assessment and

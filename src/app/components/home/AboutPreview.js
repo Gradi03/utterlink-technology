@@ -27,8 +27,9 @@ const AboutPreview = () => {
           </p>
           <p className="text-gray-700 mb-6 text-base sm:text-lg leading-relaxed">
             Our team of certified technicians brings expertise and precision to
-            every project, whether it's installing fiber optic cables, extending
-            WiFi coverage, or setting up comprehensive security systems.
+            every project, whether it&rsquo;s installing fiber optic cables,
+            extending WiFi coverage, or setting up comprehensive security
+            systems.
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-4 mt-8">
             <Link
@@ -56,7 +57,7 @@ const AboutPreview = () => {
         >
           <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-green-100">
             <Image
-              src="/gradi"
+              src="/utterlink-technician.jpg"
               alt="Utterlink technician installing fiber cables"
               fill
               className="object-cover"

@@ -43,8 +43,8 @@ const Testimonials = () => {
           What Our Clients Say
         </h2>
         <p className="text-lg text-gray-800 max-w-2xl mx-auto">
-          Don't just take our word for it – hear from our satisfied customers
-          across Cape Town.
+          Don&rsquo;t just take our word for it – hear from our satisfied
+          customers across Cape Town.
         </p>
       </motion.div>
 
@@ -83,7 +83,7 @@ const Testimonials = () => {
               </div>
 
               <p className="text-gray-700 mb-6 flex-grow leading-relaxed text-base md:text-lg">
-                "{testimonial.content}"
+                &quot;{testimonial.content}&quot;
               </p>
 
               <div>

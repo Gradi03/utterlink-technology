@@ -41,10 +41,11 @@ const PrivacyPolicy = () => {
             >
               <h2>1. Introduction</h2>
               <p>
-                Utterlink ("we," "our," or "us") is committed to protecting your
-                privacy. This Privacy Policy explains how we collect, use,
-                disclose, and safeguard your information when you visit our
-                website or use our services.
+                Utterlink (&quot;we,&quot; &quot;Our,&quot; &quot;or&quot;
+                &quot;us&quot;) is committed to protecting your privacy. This
+                Privacy Policy explains how we collect, use, disclose, and
+                safeguard your information when you visit our website or use our
+                services.
               </p>
               <p>
                 Please read this Privacy Policy carefully. If you do not agree
@@ -171,7 +172,7 @@ const PrivacyPolicy = () => {
                 using the details provided below.
               </p>
 
-              <h2>8. Children's Privacy</h2>
+              <h2>8. Children&quot;s Privacy</h2>
               <p>
                 Our services are not directed to individuals under the age of
                 18. We do not knowingly collect personal information from
@@ -183,7 +184,7 @@ const PrivacyPolicy = () => {
               <p>
                 We may update our Privacy Policy from time to time. We will
                 notify you of any changes by posting the new Privacy Policy on
-                this page and updating the "Last Updated" date.
+                this page and updating the &quot;Last Updated&quot; date.
               </p>
               <p>
                 You are advised to review this Privacy Policy periodically for

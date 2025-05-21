@@ -159,8 +159,8 @@ const TermsOfService = () => {
                 You agree to indemnify, defend, and hold harmless Utterlink and
                 its officers, directors, employees, agents, licensors, and
                 suppliers from and against all losses, expenses, damages, and
-                costs, including reasonable attorneys' fees, resulting from any
-                violation of these Terms or any activity related to your
+                costs, including reasonable attorneys&quot; fees, resulting from
+                any violation of these Terms or any activity related to your
                 account.
               </p>
 

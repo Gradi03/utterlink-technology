@@ -60,14 +60,14 @@ const WifiExtension = () => {
                   Experience Full Coverage Connectivity
                 </h2>
                 <p className="mb-4 md:mb-6 text-[#333333]">
-                  In today's connected world, having reliable WiFi throughout
-                  your home or business is not just a convenience—it's a
-                  necessity. Dead zones and weak signals can disrupt
-                  productivity, entertainment, and your smart home systems when
-                  you need them most.
+                  In today&quot;s connected world, having reliable WiFi
+                  throughout your home or business is not just a
+                  convenience—it&quot;s a necessity. Dead zones and weak signals
+                  can disrupt productivity, entertainment, and your smart home
+                  systems when you need them most.
                 </p>
                 <p className="text-[#333333]">
-                  Utterlink's WiFi signal extension services provide
+                  Utterlink&quot;s WiFi signal extension services provide
                   comprehensive solutions to ensure strong, consistent
                   connectivity in every corner of your property. Our team of
                   experts will analyze your space, identify problem areas, and
