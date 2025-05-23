@@ -3,54 +3,64 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import {
+  ArrowRight,
+  RadioTower,
+  Wifi,
+  Cctv,
+  Cable,
+  Zap,
+  DoorOpen,
+} from "lucide-react";
 
+// Services data with Lucide icon components
 const services = [
   {
-    title: "Fiber Installation",
+    title: "Fibre Installation",
     description:
       "Get lightning-fast internet with our professional fiber installation services for homes and businesses.",
-    icon: "📡",
-    link: "/services/fiber-installation",
+    icon: RadioTower,
+    link: "/services/fibre-installation",
   },
   {
     title: "WiFi Signal Extension",
     description:
       "Eliminate dead zones and enjoy seamless connectivity throughout your property with our WiFi solutions.",
-    icon: "📶",
+    icon: Wifi,
     link: "/services/wifi-extension",
   },
   {
     title: "CCTV Installation",
     description:
       "Protect what matters most with our advanced surveillance systems and security cameras.",
-    icon: "🔒",
+    icon: Cctv,
     link: "/services/cctv-installation",
   },
   {
     title: "Data Cabling",
     description:
       "Structured cabling solutions for reliable, high-performance network infrastructure.",
-    icon: "🔌",
+    icon: Cable,
     link: "/services/data-cabling",
   },
   {
     title: "Electric Fencing",
     description:
       "Enhance your property's security with our professional electric fence installation.",
-    icon: "⚡",
+    icon: Zap,
     link: "/services/electric-fencing",
   },
   {
     title: "Automatic Gates",
     description:
       "Convenience and security with our automated gate systems and access control solutions.",
-    icon: "🚪",
+    icon: DoorOpen,
     link: "/services/automatic-gates",
   },
 ];
 
-const ServiceCard = ({ title, description, icon, link, index }) => {
+// Single service card
+const ServiceCard = ({ title, description, icon: Icon, link, index }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -58,7 +68,9 @@ const ServiceCard = ({ title, description, icon, link, index }) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
       className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-green-100 group"
     >
-      <div className="text-4xl mb-4">{icon}</div>
+      <div className="text-4xl mb-4 text-green-700">
+        <Icon className="w-10 h-10" />
+      </div>
       <h3 className="text-xl font-semibold mb-2 text-green-700">{title}</h3>
       <p className="text-gray-700 mb-4">{description}</p>
       <Link
@@ -72,6 +84,7 @@ const ServiceCard = ({ title, description, icon, link, index }) => {
   );
 };
 
+// Services overview section
 const ServicesOverview = () => {
   return (
     <section className="py-20 px-4 bg-[#f5f5dc]">
@@ -86,7 +99,7 @@ const ServicesOverview = () => {
         </h2>
         <p className="text-lg text-gray-800 max-w-3xl mx-auto">
           Comprehensive connectivity and security solutions tailored to your
-          needs
+          needs.
         </p>
       </motion.div>
 

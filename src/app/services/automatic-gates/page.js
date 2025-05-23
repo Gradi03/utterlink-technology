@@ -76,13 +76,13 @@ const AutomaticGates = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.4 }} // Trigger animation when 40% of the element is visible
+                viewport={{ once: true, amount: 0.2 }} // Trigger animation when 40% of the element is visible
                 className="rounded-lg overflow-hidden shadow-md border border-green-100"
               >
                 <Image
-                  src="/automatic-gate.jpg" // **IMPORTANT: Replace with your actual image path**
+                  src="/automatic-gate.webp"
                   alt="Automated gate providing secure access to a property"
-                  width={500} // Adjust width/height as needed for your image aspect ratio
+                  width={500}
                   height={350}
                   className="object-cover w-full h-full"
                 />

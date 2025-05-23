@@ -22,7 +22,7 @@ const WifiExtension = () => {
         />
         {/* You can add other SEO meta tags as needed */}
       </Head>
-      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -60,14 +60,14 @@ const WifiExtension = () => {
                   Experience Full Coverage Connectivity
                 </h2>
                 <p className="mb-4 md:mb-6 text-[#333333]">
-                  In today&quot;s connected world, having reliable WiFi
-                  throughout your home or business is not just a
-                  convenience—it&quot;s a necessity. Dead zones and weak signals
-                  can disrupt productivity, entertainment, and your smart home
-                  systems when you need them most.
+                  In today&#39;s connected world, having reliable WiFi
+                  throughout your home or business is not just a convenience
+                  it&#39;s a necessity. Dead zones and weak signals can disrupt
+                  productivity, entertainment, and your smart home systems when
+                  you need them most.
                 </p>
                 <p className="text-[#333333]">
-                  Utterlink&quot;s WiFi signal extension services provide
+                  Utterlink&#39;s WiFi signal extension services provide
                   comprehensive solutions to ensure strong, consistent
                   connectivity in every corner of your property. Our team of
                   experts will analyze your space, identify problem areas, and
@@ -83,7 +83,7 @@ const WifiExtension = () => {
                 className="rounded-lg overflow-hidden shadow-md border border-green-100"
               >
                 <Image
-                  src="/wifi-mesh-system.jpg" // **IMPORTANT: Replace with your actual image path**
+                  src="/wifi-mesh-system.webp"
                   alt="Seamless WiFi coverage with mesh system"
                   width={500}
                   height={350}

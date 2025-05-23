@@ -7,31 +7,32 @@ import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setIsScrolled(true);
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setShowNavbar(false); // Scrolling down
       } else {
-        setIsScrolled(false);
+        setShowNavbar(true); // Scrolling up
       }
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full bg-[#f5f5dc] text-black shadow-md z-50 transition-shadow duration-300 ${
-        isScrolled ? "shadow-lg" : "shadow-md"
+      className={`fixed top-0 left-0 w-full bg-[#f5f5dc] text-black z-50 transition-transform duration-300 ${
+        showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-md">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <Link href="/">
@@ -73,7 +74,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-[#f5f5dc] px-4 pt-2 pb-4 space-y-3">
+        <div className="md:hidden bg-[#f5f5dc] px-4 pt-2 pb-4 space-y-3 shadow-md">
           <Link
             href="/"
             className="block hover:text-green-700 font-medium"

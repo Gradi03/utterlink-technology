@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Shield, CheckCircle, PhoneCall } from "lucide-react";
+import { Shield, CheckCircle, PhoneCall, Cctv } from "lucide-react";
 import Link from "next/link";
 import Head from "next/head";
 import Image from "next/image"; // Import the Image component
@@ -22,7 +22,7 @@ const CCTVInstallation = () => {
         />
         {/* You can add other SEO meta tags as needed */}
       </Head>
-      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] py-24 md:py-14 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
@@ -33,7 +33,7 @@ const CCTVInstallation = () => {
             className="text-center mb-10 md:mb-16 lg:mb-20" // Increased bottom margin
           >
             <div className="inline-block p-3 md:p-4 bg-green-400/10 rounded-full mb-4 md:mb-6">
-              <Shield className="h-10 w-10 md:h-12 md:w-12 text-green-500" />
+              <Cctv className="h-10 w-10 md:h-12 md:w-12 text-green-500" />
             </div>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-green-700">
               CCTV Installation
@@ -58,7 +58,7 @@ const CCTVInstallation = () => {
                   Advanced Security Solutions
                 </h2>
                 <p className="mb-4 md:mb-6 text-[#333333]">
-                  In today&quot;s world, security is not a luxury but a
+                  In today&apos;s world, security is not a luxury but a
                   necessity. CCTV systems provide an effective deterrent against
                   crime, valuable evidence in case of incidents, and peace of
                   mind knowing your property is under constant surveillance.
@@ -75,13 +75,13 @@ const CCTVInstallation = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.4 }} // Trigger animation when 40% of the element is visible
+                viewport={{ once: true, amount: 0.2 }}
                 className="rounded-lg overflow-hidden shadow-md border border-green-100"
               >
                 <Image
-                  src="/cctv-surveillance.jpg" // **IMPORTANT: Replace with your actual image path**
+                  src="/cctv-surveillance.webp"
                   alt="Modern CCTV surveillance camera protecting a property"
-                  width={500} // Adjust width/height as needed for your image aspect ratio
+                  width={500}
                   height={350}
                   className="object-cover w-full h-full"
                 />
@@ -212,7 +212,7 @@ const CCTVInstallation = () => {
                   </h3>
                   <p className="text-[#333333]">
                     Durable outdoor cameras designed to withstand Cape
-                    Town&quot;s diverse weather conditions.
+                    Town&apos;s diverse weather conditions.
                   </p>
                 </div>
               </div>
