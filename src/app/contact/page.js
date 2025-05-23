@@ -55,7 +55,7 @@ const Contact = () => {
   };
 
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.542297978188!2d18.4232209247889!3d-33.9248685734185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5168ed89a6db%3A0xa5ddf1ae58f1db91!2s123%20Main%20Rd%2C%20Cape%20Town%2C%208001!5e0!3m2!1sen!2sza!4v1737007947838!5m2!1sen!2sza";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.091787308362!2d18.604295275711618!3d-33.93876727319998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5aa5230d76b3%3A0xec948d26c06ef74c!2s42%20Stellenberg%20Rd%2C%20Parow%20Industrial%2C%20Cape%20Town%2C%207493!5e0!3m2!1sen!2sza!4v1748030144854!5m2!1sen!2sza";
 
   return (
     <>
@@ -138,9 +138,11 @@ const Contact = () => {
                         Location
                       </h3>
                       <p className="text-[#555555]">
-                        123 Main Road
+                        42 Stellenberg Road
                         <br />
-                        Cape Town, 8001
+                        Parow Industrial
+                        <br />
+                        Cape Town, 7493
                         <br />
                         South Africa
                       </p>
@@ -318,16 +320,24 @@ const Contact = () => {
               </div>
 
               {/* Google Map Embed */}
-              <div className="rounded-lg overflow-hidden shadow-md border border-green-100">
-                <iframe
-                  src={mapEmbedUrl}
-                  width="100%"
-                  height="300"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+              <div className="w-full">
+                <h2 className="text-2xl font-bold mb-4 text-green-600 text-center">
+                  Our Location
+                </h2>
+                <p className="text-center text-[#555555] mb-4">
+                  Visit us at our office in Parow Industrial. We’re happy to
+                  assist you!
+                </p>
+                <div className="w-full h-[250px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-lg border border-green-100">
+                  <iframe
+                    src={mapEmbedUrl}
+                    className="w-full h-full"
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Utterlink Location Map"
+                  ></iframe>
+                </div>
               </div>
             </motion.div>
           </div>

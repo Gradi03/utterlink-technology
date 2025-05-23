@@ -37,7 +37,7 @@ const FibreInstallation = () => {
           content="fiber installation, fibre internet, high-speed internet, business fiber, residential fiber, network installation, Cape Town internet, fast internet"
         />
       </Head>
-      <div className="bg-white py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <motion.div
@@ -71,18 +71,20 @@ const FibreInstallation = () => {
                   Experience the Speed of Fiber
                 </h2>
                 <p className="mb-4 md:mb-6 text-[#333333]">
-                  **Fiber optic internet** is the gold standard of connectivity,
-                  offering unparalleled speeds, reliability, and performance.
-                  Whether you&quot;re streaming 4K content, gaming online, video
-                  conferencing, or running a business that depends on constant
-                  connectivity, fiber delivers the speed and stability you need.
+                  <strong>Fiber optic internet</strong> is the gold standard of
+                  connectivity, offering unparalleled speeds, reliability, and
+                  performance. Whether you&quot;re streaming 4K content, gaming
+                  online, video conferencing, or running a business that depends
+                  on constant connectivity, fiber delivers the speed and
+                  stability you need.
                 </p>
                 <p className="text-[#333333]">
-                  At **Utterlink**, we specialize in professional fiber
-                  installations for both residential and commercial properties
-                  in **Cape Town**. Our experienced technicians ensure a clean,
-                  efficient installation that minimizes disruption while
-                  maximizing your network performance.
+                  At <strong>Utterlink</strong>, we specialize in professional
+                  fiber installations for both residential and commercial
+                  properties in <strong>Cape Town</strong>. Our experienced
+                  technicians ensure a clean, efficient installation that
+                  minimizes disruption while maximizing your network
+                  performance.
                 </p>
               </div>
               <motion.div
