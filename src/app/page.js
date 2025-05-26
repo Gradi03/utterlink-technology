@@ -5,7 +5,7 @@ import ServicesOverview from "@/app/components/home/ServicesOverview"; // Correc
 import AboutPreview from "./components/home/AboutPreview";
 import Testimonials from "./components/home/Testimonials";
 import CallToAction from "./components/cta/CallToAction";
-import BlogHighlights from "@/app/components/home/BlogHighlights";
+// import BlogHighlights from "@/app/components/home/BlogHighlights";
 
 export default function Home() {
   return (

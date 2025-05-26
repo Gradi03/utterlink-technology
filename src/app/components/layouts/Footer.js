@@ -1,12 +1,29 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { Phone, Mail, Clock } from "lucide-react";
+import { Phone, Mail, Clock } from "lucide-react"; // Import MessageCircle
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
+  const phoneNumber = "+27769665155";
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
+
+  // State to control visibility of the text
+  const [showMessage, setShowMessage] = useState(true);
+
+  useEffect(() => {
+    // Set a timeout to hide the message after 4 seconds
+    const timer = setTimeout(() => {
+      setShowMessage(false);
+    }, 4000); // 4000 milliseconds = 4 seconds
+
+    // Cleanup the timer if the component unmounts
+    return () => clearTimeout(timer);
+  }, []); // Empty dependency array means this effect runs once on mount
+
   return (
-    <footer className="bg-gradient-to-tr from-gray-900 via-black to-gray-900 text-white py-12 mt-20">
+    <footer className="bg-gradient-to-tr from-gray-900 via-black to-gray-900 text-white py-12 relative">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -138,7 +155,7 @@ const Footer = () => {
                 5155
               </li>
               <li className="flex items-start">
-                <Mail className="h-5 w-5 mr-2 text-green-400" />{" "}
+                <Mail className="h-5 w-5 mr-2 text-green-400" />
                 info@utterlink.co.za
               </li>
               <li className="flex items-start">
@@ -155,13 +172,36 @@ const Footer = () => {
           © {new Date().getFullYear()} Utterlink. All rights reserved. |
           <Link href="/privacy-policy" className="hover:text-green-400 ml-1">
             Privacy Policy
-          </Link>{" "}
+          </Link>
           |
           <Link href="/terms-of-service" className="hover:text-green-400 ml-1">
             Terms of Service
           </Link>
         </div>
       </div>
+
+      {/* Animated WhatsApp Button */}
+      <a
+        href={whatsappLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={
+          `fixed bottom-4 right-4 z-50 flex items-center
+          bg-green-500 hover:bg-green-600 text-white rounded-full
+          shadow-lg p-2 transition-all duration-500 ease-in-out
+          ${showMessage ? "pl-4 pr-6" : "p-2"}` // Adjust padding based on message visibility
+        }
+      >
+        <span
+          className={`whitespace-nowrap overflow-hidden
+            ${showMessage ? "w-auto opacity-100 mr-2" : "w-0 opacity-0"}
+            transition-all duration-500 ease-in-out text-base font-semibold`}
+        >
+          Get a quote now
+        </span>
+        {/* Lucide MessageCircle icon */}
+        <FaWhatsapp className="w-8 h-8" />
+      </a>
     </footer>
   );
 };

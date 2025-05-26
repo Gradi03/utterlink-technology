@@ -18,8 +18,8 @@ const CallToAction = () => {
         {/* Background image with overlay */}
         <div className="absolute inset-0">
           <Image
-            src="/utterlink-cta.jpg"
-            alt="Network infrastructure"
+            src="/wifi-mesh-system.webp"
+            alt="Fibre optic installation"
             layout="fill"
             objectFit="cover"
             priority
