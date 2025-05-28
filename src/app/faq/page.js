@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -67,73 +67,69 @@ const FAQ = () => {
           name="keywords"
           content="Utterlink FAQ, connectivity questions, security system questions, fiber installation FAQ"
         />
-        {/* You can add other SEO meta tags as needed */}
       </Head>
-      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] pt-24 md:pt-28 lg:pt-32">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center mb-8 md:mb-12 lg:mb-16"
+            className="text-center mb-12"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 text-green-700">
+            <h1 className="text-4xl font-bold text-green-700 mb-4">
               Frequently Asked Questions
             </h1>
-            <p className="text-lg md:text-xl text-[#555555] max-w-3xl mx-auto">
+            <p className="text-lg text-[#555555]">
               Find answers to common questions about our services and processes
             </p>
           </motion.div>
 
-          <div className="max-w-3xl mx-auto mb-8 md:mb-12 lg:mb-16">
-            <div className="w-full space-y-4">
-              {faqItems.map((item, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: index * 0.05 }}
-                  viewport={{ once: true }}
+          <div className="space-y-4 mb-16">
+            {faqItems.map((item, index) => (
+              <div
+                key={index}
+                className="border border-green-100 rounded-lg shadow-sm bg-[#F5F5DC]"
+              >
+                <button
+                  type="button"
+                  className="flex items-center justify-between w-full px-6 py-4 hover:bg-green-100 text-left font-medium text-[#333333]"
+                  aria-expanded={openItem === index}
+                  onClick={() => toggleAccordion(index)}
                 >
-                  <div className="border border-green-100 rounded-lg overflow-hidden bg-[#F5F5DC] shadow-sm">
-                    <button
-                      type="button"
-                      className="flex items-center justify-between w-full px-6 py-4 hover:bg-green-100 font-medium text-[#333333] focus:outline-none"
-                      aria-expanded={openItem === index ? "true" : "false"}
-                      aria-controls={`faq-content-${index}`}
-                      onClick={() => toggleAccordion(index)}
+                  <span>{item.question}</span>
+                  <motion.svg
+                    className={`w-3 h-3 transform transition-transform ${
+                      openItem === index ? "rotate-180" : ""
+                    }`}
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 10 6"
+                  >
+                    <path
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M9 5 5 1 1 5"
+                    />
+                  </motion.svg>
+                </button>
+                <AnimatePresence initial={false}>
+                  {openItem === index && (
+                    <motion.div
+                      key="content"
+                      initial={{ height: 0, opacity: 0 }}
+                      animate={{ height: "auto", opacity: 1 }}
+                      exit={{ height: 0, opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="px-6 overflow-hidden bg-green-50/50"
                     >
-                      <span>{item.question}</span>
-                      <svg
-                        className={`w-3 h-3 shrink-0 transition-transform ${
-                          openItem === index ? "rotate-180" : ""
-                        }`}
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                      >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 5 5 1 1 5"
-                        />
-                      </svg>
-                    </button>
-                    <div
-                      id={`faq-content-${index}`}
-                      className={`bg-green-50/50 px-6 py-4 overflow-hidden transition-max-h duration-300 ${
-                        openItem === index ? "max-h-[500px]" : "max-h-0" // Increased max-h and ensure overflow-hidden
-                      }`}
-                    >
-                      <p className="text-[#555555]">{item.answer}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
+                      <p className="py-4 text-[#555555]">{item.answer}</p>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </div>
+            ))}
           </div>
 
           <motion.div
@@ -143,23 +139,23 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="text-center max-w-2xl mx-auto bg-green-50/50 p-8 rounded-xl"
           >
-            <h2 className="text-xl md:text-2xl font-bold mb-4 text-green-700">
+            <h2 className="text-2xl font-bold mb-4 text-green-700">
               Still have questions?
             </h2>
             <p className="mb-6 text-[#555555]">
               Our team is ready to help with any additional questions you might
-              have about our services.
+              have.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                className="inline-flex items-center justify-center px-6 py-3 text-base font-medium rounded-md shadow-sm text-black bg-green-500 hover:bg-green-600"
               >
                 Contact Us
               </Link>
               <Link
                 href="/services"
-                className="inline-flex items-center justify-center px-4 py-2 md:px-6 md:py-3 border border-green-500 text-base font-medium rounded-md text-green-500 hover:bg-green-500 hover:text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
+                className="inline-flex items-center justify-center px-6 py-3 border border-green-500 text-base font-medium rounded-md text-green-500 hover:bg-green-500 hover:text-black"
               >
                 Explore Services
               </Link>

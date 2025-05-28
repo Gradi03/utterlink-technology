@@ -20,7 +20,7 @@ const About = () => {
           content="about Utterlink, connectivity company, security solutions provider, Cape Town tech company"
         />
       </Head>
-      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] py-18 md:py-16 lg:py-18">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0 }}

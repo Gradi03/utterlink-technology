@@ -2,41 +2,24 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        setShowNavbar(false); // Scrolling down
-      } else {
-        setShowNavbar(true); // Scrolling up
-      }
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full bg-[#f5f5dc] text-black z-50 transition-transform duration-300 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 shadow-md">
+    <nav className="fixed top-0 left-0 w-full bg-[#f5f5dc] text-black z-50 shadow-md transition-transform duration-300 translate-y-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <Link href="/">
-            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+            <Image
+              src="/logo.png"
+              alt="Utterlink logo"
+              width={150}
+              height={150}
+            />
           </Link>
 
           {/* Desktop Menu */}
@@ -44,11 +27,11 @@ export default function Navbar() {
             <Link href="/" className="hover:text-green-700 font-medium">
               Home
             </Link>
-            <Link href="/services" className="hover:text-green-700 font-medium">
-              Services
-            </Link>
             <Link href="/about" className="hover:text-green-700 font-medium">
               About
+            </Link>
+            <Link href="/services" className="hover:text-green-700 font-medium">
+              Services
             </Link>
             <Link href="/faq" className="hover:text-green-700 font-medium">
               FAQ
