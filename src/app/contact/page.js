@@ -4,6 +4,10 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import Head from "next/head";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content"; // Import for React content inside SweetAlert
+
+const MySwal = withReactContent(Swal); // Initialize SweetAlert2 with React content support
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +18,6 @@ const Contact = () => {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [toastMessage, setToastMessage] = useState(null);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -24,38 +27,177 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
+    // Show processing SweetAlert as a subtle toast-like notification
+    MySwal.fire({
+      title: (
+        <div className="text-lg font-semibold text-gray-800">
+          Sending your message...
+        </div>
+      ),
+      html: <div className="text-sm text-gray-600">Please wait a moment.</div>,
+      icon: "info", // Use an info icon for processing
+      toast: true, // Make it a toast
+      position: "top-end", // Position at the top right
+      showConfirmButton: false, // No confirm button
+      timer: 0, // No auto-close for processing, will be closed manually
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.addEventListener("mouseenter", Swal.stopTimer);
+        toast.addEventListener("mouseleave", Swal.resumeTimer);
+      },
+      customClass: {
+        popup:
+          "swal2-toast-popup-custom bg-white rounded-lg shadow-xl border border-blue-200", // Custom class for styling
+      },
+      showClass: {
+        popup: "animate__animated animate__fadeInRight animate__faster", // Optional: entry animation
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutRight animate__faster", // Optional: exit animation
+      },
+    });
+
+    const data = {
+      ...formData,
+      access_key: "4b00ec43-4a66-4ac8-a671-aa7f661d4eb3",
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      MySwal.close(); // Close the processing toast
+
+      if (result.success) {
+        MySwal.fire({
+          title: (
+            <div className="text-lg font-semibold text-green-700">
+              Message Sent!
+            </div>
+          ),
+          html: (
+            <div className="text-sm text-gray-600">
+              We&apos;ve received your inquiry and will get back to you soon.
+            </div>
+          ),
+          icon: "success",
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000, // Auto-close after 3 seconds
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+          customClass: {
+            popup:
+              "swal2-toast-popup-custom bg-white rounded-lg shadow-xl border border-green-200",
+          },
+          showClass: {
+            popup: "animate__animated animate__fadeInRight animate__faster",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutRight animate__faster",
+          },
+        });
+
+        // Reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+      } else {
+        console.error("Web3Forms error:", result);
+        MySwal.fire({
+          title: (
+            <div className="text-lg font-semibold text-red-700">Oops...</div>
+          ),
+          html: (
+            <div className="text-sm text-gray-600">
+              {result.message || "Something went wrong! Please try again."}
+            </div>
+          ),
+          icon: "error",
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 5000, // Longer timer for errors
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+          customClass: {
+            popup:
+              "swal2-toast-popup-custom bg-white rounded-lg shadow-xl border border-red-200",
+          },
+          showClass: {
+            popup: "animate__animated animate__fadeInRight animate__faster",
+          },
+          hideClass: {
+            popup: "animate__animated animate__fadeOutRight animate__faster",
+          },
+        });
+      }
+    } catch (error) {
+      console.error("Submission error:", error);
+      MySwal.close(); // Close the processing toast
+      MySwal.fire({
+        title: (
+          <div className="text-lg font-semibold text-red-700">
+            Network Error
+          </div>
+        ),
+        html: (
+          <div className="text-sm text-gray-600">
+            Could not connect to the server. Please check your internet
+            connection and try again.
+          </div>
+        ),
+        icon: "error",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+        customClass: {
+          popup:
+            "swal2-toast-popup-custom bg-white rounded-lg shadow-xl border border-red-200",
+        },
+        showClass: {
+          popup: "animate__animated animate__fadeInRight animate__faster",
+        },
+        hideClass: {
+          popup: "animate__animated animate__fadeOutRight animate__faster",
+        },
+      });
+    } finally {
       setIsSubmitting(false);
-      setToastMessage({
-        title: "Message sent!",
-        description:
-          "We've received your inquiry and will get back to you soon.",
-        variant: "default",
-      });
-
-      // Reset form
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      });
-
-      // Clear toast message after a delay
-      setTimeout(() => {
-        setToastMessage(null);
-      }, 3000);
-    }, 1500);
+    }
   };
 
   const mapEmbedUrl =
-    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.091787308362!2d18.604295275711618!3d-33.93876727319998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5aa5230d76b3%3A0xec948d26c06ef74c!2s42%20Stellenberg%20Rd%2C%20Parow%20Industrial%2C%20Cape%20Town%2C%207493!5e0!3m2!1sen!2sza!4v1748030144854!5m2!1sen!2sza";
+    "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3310.8252033622214!2d18.59976331521199!3d-33.91896898064972!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc5220c386629b%3A0xc4f54e6b5e024227!2s42%20Stellenberg%20Rd%2C%20Parow%20Industrial%2C%20Cape%20Town%2C%207493%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1678280000000!5m2!1sen!2sus";
 
   return (
     <>
@@ -73,9 +215,10 @@ const Contact = () => {
       <div className="bg-[#F5F5DC] py-16">
         <div className="container mx-auto px-4">
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.5 }}
             className="text-center mb-12"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-green-700">
@@ -87,12 +230,14 @@ const Contact = () => {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Main Content Grid (Contact Info & Form - now side-by-side on large screens) */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto">
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="space-y-8"
             >
               <div>
@@ -113,7 +258,11 @@ const Contact = () => {
                       <h3 className="font-semibold mb-1 text-[#333333]">
                         Phone
                       </h3>
-                      <p className="text-[#555555]">+27 76 966 5155</p>
+                      <p className="text-[#555555]">
+                        <a href="tel:+27769665155" className="hover:underline">
+                          +27 76 966 5155
+                        </a>
+                      </p>
                     </div>
                   </div>
 
@@ -125,7 +274,14 @@ const Contact = () => {
                       <h3 className="font-semibold mb-1 text-[#333333]">
                         Email
                       </h3>
-                      <p className="text-[#555555]">info@utterlink.co.za</p>
+                      <p className="text-[#555555]">
+                        <a
+                          href="mailto:info@utterlink.co.za"
+                          className="hover:underline"
+                        >
+                          info@utterlink.co.za
+                        </a>
+                      </p>
                     </div>
                   </div>
 
@@ -169,12 +325,12 @@ const Contact = () => {
                 </div>
               </div>
             </motion.div>
-
-            {/* Contact Form & Map */}
+            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, amount: 0.3 }}
               className="space-y-8"
             >
               <div className="bg-white p-8 rounded-lg border border-green-100 shadow-sm">
@@ -283,7 +439,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+                    className="w-full bg-green-500 hover:bg-green-600 text-black font-medium py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 disabled:opacity-70 disabled:cursor-not-allowed"
                   >
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
@@ -318,36 +474,35 @@ const Contact = () => {
                   </button>
                 </form>
               </div>
-
-              {/* Google Map Embed */}
-              <div className="w-full">
-                <h2 className="text-2xl font-bold mb-4 text-green-600 text-center">
-                  Our Location
-                </h2>
-                <p className="text-center text-[#555555] mb-4">
-                  Visit us at our office in Parow Industrial. We’re happy to
-                  assist you!
-                </p>
-                <div className="w-full h-[250px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-lg border border-green-100">
-                  <iframe
-                    src={mapEmbedUrl}
-                    className="w-full h-full"
-                    allowFullScreen=""
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Utterlink Location Map"
-                  ></iframe>
-                </div>
-              </div>
             </motion.div>
           </div>
 
-          {toastMessage && (
-            <div className="fixed bottom-8 right-8 bg-green-500 text-black py-3 px-4 rounded-md shadow-lg">
-              <h4 className="font-bold">{toastMessage.title}</h4>
-              <p>{toastMessage.description}</p>
+          {/* Google Map Embed (now full width below the grid) */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true, amount: 0.3 }}
+            className="w-full max-w-7xl mx-auto mt-12 px-4 md:px-0"
+          >
+            <h2 className="text-2xl font-bold mb-4 text-green-600 text-center">
+              Our Location
+            </h2>
+            <p className="text-center text-[#555555] mb-4">
+              Visit us at our office in Parow Industrial. We’re happy to assist
+              you!
+            </p>
+            <div className="w-full h-[250px] md:h-[400px] lg:h-[500px] rounded-lg overflow-hidden shadow-lg border border-green-100">
+              <iframe
+                src={mapEmbedUrl}
+                className="w-full h-full"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Utterlink Location Map"
+              ></iframe>
             </div>
-          )}
+          </motion.div>
         </div>
       </div>
     </>

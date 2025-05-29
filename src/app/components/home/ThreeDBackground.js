@@ -1,3 +1,4 @@
+// components/ThreeDBackground.jsx
 "use client";
 
 import { Canvas, useFrame } from "@react-three/fiber";
@@ -18,8 +19,6 @@ function NetworkSphere() {
     const geo = new THREE.SphereGeometry(5, 32, 32);
     return geo;
   }, []);
-
-  // 3D background
 
   return (
     <group ref={ref}>

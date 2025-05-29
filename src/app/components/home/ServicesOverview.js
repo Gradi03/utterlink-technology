@@ -66,6 +66,7 @@ const ServiceCard = ({ title, description, icon: Icon, link, index }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.1 }}
+      viewport={{ once: true }} // Added viewport prop for the card animations
       className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all border border-green-100 group"
     >
       <div className="text-4xl mb-4 text-green-700">
@@ -92,6 +93,7 @@ const ServicesOverview = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
+        viewport={{ once: true }} // Added viewport prop for the heading animation
         className="text-center mb-16"
       >
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">

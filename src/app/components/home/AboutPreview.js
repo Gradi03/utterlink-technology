@@ -57,8 +57,8 @@ const AboutPreview = () => {
         >
           <div className="relative w-full aspect-video rounded-lg overflow-hidden shadow-lg border border-green-100">
             <Image
-              src="/utterlink-technician.jpg"
-              alt="Utterlink technician installing fiber cables"
+              src="/fibre.webp"
+              alt="Fibre optic installation in Cape Town"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 50vw"

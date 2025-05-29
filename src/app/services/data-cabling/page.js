@@ -22,7 +22,7 @@ const DataCabling = () => {
         />
         {/* You can add other SEO meta tags as needed */}
       </Head>
-      <div className="bg-[#F5F5DC] py-22 md:py-20 lg:py-20">
+      <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}

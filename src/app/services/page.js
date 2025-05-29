@@ -87,7 +87,7 @@ const ServiceCard = ({ title, description, icon: Icon, link, index }) => {
 // Services overview section
 const ServicesOverview = () => {
   return (
-    <section className="py-20 px-4 bg-[#f5f5dc]">
+    <section className="py-24 px-4 bg-[#f5f5dc]">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

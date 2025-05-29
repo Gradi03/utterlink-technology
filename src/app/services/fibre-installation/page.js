@@ -37,7 +37,7 @@ const FibreInstallation = () => {
           content="fiber installation, fibre internet, high-speed internet, business fiber, residential fiber, network installation, Cape Town internet, fast internet"
         />
       </Head>
-      <div className="bg-[#F5F5DC] py-8 md:py-12 lg:py-16">
+      <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}
           <motion.div

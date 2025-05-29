@@ -86,7 +86,7 @@ const About = () => {
               </div>
               <div className="rounded-lg overflow-hidden shadow-md">
                 <Image
-                  src="/cape-town-view.jpg"
+                  src="/cape-town.webp"
                   alt="Cape Town View"
                   width={600}
                   height={400}

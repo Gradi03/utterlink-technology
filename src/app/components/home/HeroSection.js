@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import ThreeDBackground from "./ThreeDBackground";
+import ThreeDBackground from "./ThreeDBackground"; // Assuming this component is also responsive
 
 export default function Hero() {
   return (
@@ -26,7 +26,7 @@ export default function Hero() {
         <motion.p
           className="text-lg md:text-2xl mb-8 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, yz: 0 }}
+          animate={{ opacity: 1, y: 0 }} // Corrected 'yz' to 'y'
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           From fiber installation to security systems, we keep your home and

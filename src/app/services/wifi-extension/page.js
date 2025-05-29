@@ -20,7 +20,6 @@ const WifiExtension = () => {
           name="keywords"
           content="WiFi extension, WiFi dead zones, WiFi booster, WiFi mesh system, WiFi signal strength, Cape Town WiFi services"
         />
-        {/* You can add other SEO meta tags as needed */}
       </Head>
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
