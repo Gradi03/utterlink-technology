@@ -14,13 +14,39 @@ const WifiExtension = () => {
         <title>WiFi Signal Extension Services | Utterlink</title>
         <meta
           name="description"
-          content="Eliminate dead zones and enjoy seamless WiFi connectivity throughout your property with Utterlink's professional WiFi signal extension services."
+          content="Eliminate dead zones and enjoy seamless WiFi connectivity throughout your property with Utterlink's professional WiFi signal extension services in Cape Town."
         />
         <meta
           name="keywords"
-          content="WiFi extension, WiFi dead zones, WiFi booster, WiFi mesh system, WiFi signal strength, Cape Town WiFi services"
+          content="WiFi extension, WiFi dead zones, WiFi booster, mesh WiFi system, signal strength improvement, home WiFi, Cape Town WiFi services"
+        />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph tags for social sharing */}
+        <meta
+          property="og:title"
+          content="WiFi Signal Extension Services | Utterlink"
+        />
+        <meta
+          property="og:description"
+          content="Enjoy seamless WiFi across your home or business with Utterlink's expert signal extension solutions in Cape Town."
+        />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/wifi-extension"
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/images/services/wifi-mesh.webp"
+        />
+
+        {/* Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/wifi-extension"
         />
       </Head>
+
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

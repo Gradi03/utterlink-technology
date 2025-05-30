@@ -205,13 +205,26 @@ const Contact = () => {
         <title>Contact Us | Utterlink</title>
         <meta
           name="description"
-          content="Get in touch with Utterlink for inquiries about our connectivity and security solutions, request quotes, or get technical support."
+          content="Get in touch with Utterlink in Cape Town for inquiries, quotes on connectivity or security solutions, or to receive expert technical support."
         />
         <meta
           name="keywords"
-          content="contact Utterlink, connectivity services contact, security solutions quote, Cape Town tech support"
+          content="contact Utterlink, connectivity support, security solutions quote, Cape Town tech support, Utterlink contact info"
         />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social sharing */}
+        <meta property="og:title" content="Contact Us | Utterlink" />
+        <meta
+          property="og:description"
+          content="Reach out to Utterlink for professional support and quotes on our connectivity and security services in Cape Town."
+        />
+        <meta property="og:url" content="https://utterlink.co.za/contact" />
+
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://utterlink.co.za/contact" />
       </Head>
+
       <div className="bg-[#F5F5DC] py-16">
         <div className="container mx-auto px-4">
           <motion.div

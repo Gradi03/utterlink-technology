@@ -14,13 +14,57 @@ const DataCabling = () => {
         <title>Professional Data Cabling Services | Utterlink Cape Town</title>
         <meta
           name="description"
-          content="Reliable and efficient data cabling solutions in Cape Town for seamless network connectivity. Structured cabling for businesses and homes."
+          content="Get fast, reliable, and scalable data cabling services in Cape Town. Utterlink offers structured cabling solutions for homes, offices, and commercial networks."
         />
         <meta
           name="keywords"
-          content="data cabling, network cabling, structured cabling, ethernet cabling, fiber optic cabling, data network installation, Cape Town data cabling services"
+          content="data cabling, network cabling, structured cabling, ethernet cabling, fiber optic cabling, data cable installation, network setup, Cape Town IT solutions"
         />
-        {/* You can add other SEO meta tags as needed */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/data-cabling"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/data-cabling"
+        />
+        <meta
+          property="og:title"
+          content="Professional Data Cabling Services | Utterlink Cape Town"
+        />
+        <meta
+          property="og:description"
+          content="Seamless data cabling installations for homes and businesses in Cape Town. Trust Utterlink for high-performance network connectivity solutions."
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/data-cabling.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://utterlink.co.za/services/data-cabling"
+        />
+        <meta
+          name="twitter:title"
+          content="Professional Data Cabling Services | Utterlink Cape Town"
+        />
+        <meta
+          name="twitter:description"
+          content="Seamless data cabling installations for homes and businesses in Cape Town. Trust Utterlink for high-performance network connectivity solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://utterlink.co.za/data-cabling.webp"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
       </Head>
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}

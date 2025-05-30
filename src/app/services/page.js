@@ -12,6 +12,7 @@ import {
   Zap,
   DoorOpen,
 } from "lucide-react";
+import Head from "next/head";
 
 // Services data with Lucide icon components
 const services = [
@@ -87,40 +88,57 @@ const ServiceCard = ({ title, description, icon: Icon, link, index }) => {
 // Services overview section
 const ServicesOverview = () => {
   return (
-    <section className="py-24 px-4 bg-[#f5f5dc]">
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">
-          Our Expert Services
-        </h2>
-        <p className="text-lg text-gray-800 max-w-3xl mx-auto">
-          Comprehensive connectivity and security solutions tailored to your
-          needs.
-        </p>
-      </motion.div>
+    <>
+      <Head>
+        <title>
+          Our Services | Utterlink - Connectivity & Security Solutions
+        </title>
+        <meta
+          name="description"
+          content="Explore Utterlink's expert services including fibre installation, WiFi extension, CCTV, data cabling, electric fencing, and automatic gates in Cape Town."
+        />
+        <meta
+          name="keywords"
+          content="fibre installation, wifi extension, CCTV installation, data cabling, electric fencing, automatic gates, connectivity, security, Cape Town"
+        />
+        <link rel="canonical" href="https://www.utterlink.co.za/services" />
+      </Head>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} index={index} />
-        ))}
-      </div>
-
-      <div className="text-center mt-16">
-        <p className="text-xl text-gray-800 mb-4">
-          Ready to upgrade your home or business with our expert solutions?
-        </p>
-        <Link
-          href="/contact"
-          className="inline-flex items-center px-6 py-3 bg-green-700 text-white font-semibold text-lg rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg"
+      <section className="py-24 px-4 bg-[#f5f5dc]">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-16"
         >
-          Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
-      </div>
-    </section>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-green-800">
+            Our Expert Services
+          </h2>
+          <p className="text-lg text-gray-800 max-w-3xl mx-auto">
+            Comprehensive connectivity and security solutions tailored to your
+            needs.
+          </p>
+        </motion.div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <ServiceCard key={index} {...service} index={index} />
+          ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <p className="text-xl text-gray-800 mb-4">
+            Ready to upgrade your home or business with our expert solutions?
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center px-6 py-3 bg-green-700 text-white font-semibold text-lg rounded-full hover:bg-green-800 transition-all shadow-md hover:shadow-lg"
+          >
+            Get a Free Quote <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+      </section>
+    </>
   );
 };
 

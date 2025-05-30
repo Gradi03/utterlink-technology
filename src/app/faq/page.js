@@ -61,13 +61,29 @@ const FAQ = () => {
         <title>Frequently Asked Questions | Utterlink</title>
         <meta
           name="description"
-          content="Find answers to commonly asked questions about Utterlink's connectivity and security services, installation processes, maintenance plans, and more."
+          content="Find answers to the most common questions about Utterlink’s connectivity and security services in Cape Town, including installation, pricing, and support."
         />
         <meta
           name="keywords"
-          content="Utterlink FAQ, connectivity questions, security system questions, fiber installation FAQ"
+          content="Utterlink FAQ, connectivity support, fiber installation questions, security service answers, Cape Town internet help"
         />
+        <meta name="robots" content="index, follow" />
+
+        {/* Open Graph / Social Media Tags */}
+        <meta
+          property="og:title"
+          content="Frequently Asked Questions | Utterlink"
+        />
+        <meta
+          property="og:description"
+          content="Need help? Browse our FAQ to learn more about Utterlink’s connectivity and security solutions in Cape Town."
+        />
+        <meta property="og:url" content="https://utterlink.co.za/faq" />
+
+        {/* Canonical Link */}
+        <link rel="canonical" href="https://utterlink.co.za/faq" />
       </Head>
+
       <div className="bg-[#F5F5DC] pt-24 md:pt-28 lg:pt-32">
         <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
           <motion.div

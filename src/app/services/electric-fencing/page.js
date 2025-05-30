@@ -11,17 +11,41 @@ const ElectricFencing = () => {
   return (
     <>
       <Head>
-        <title>Electric Fencing Services | Utterlink</title>
+        <title>
+          Electric Fencing Cape Town | Installation & Repairs | Utterlink
+        </title>
         <meta
           name="description"
-          content="Enhance your property's security with Utterlink's professional electric fence installation and maintenance services in Cape Town."
+          content="Secure your property with expert electric fencing installation and repairs in Cape Town. Utterlink delivers reliable, affordable perimeter protection for homes and businesses."
         />
         <meta
           name="keywords"
-          content="electric fencing, security fencing, perimeter security, electric fence installation, Cape Town security services"
+          content="electric fencing Cape Town, electric fence installation, perimeter security, electric fencing repairs, security fencing services, home and business protection"
         />
-        {/* You can add other SEO meta tags as needed */}
+        <meta
+          property="og:title"
+          content="Electric Fencing Cape Town | Installation & Repairs | Utterlink"
+        />
+        <meta
+          property="og:description"
+          content="Expert electric fencing installation and maintenance for homes and businesses in Cape Town. Reliable protection from Utterlink."
+        />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/electric-fencing"
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/images/services/electric-fence.jpg"
+        />
+
+        {/* ✅ Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/electric-fencing"
+        />
       </Head>
+
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">

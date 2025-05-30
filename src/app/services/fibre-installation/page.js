@@ -26,7 +26,7 @@ const FibreInstallation = () => {
     <>
       <Head>
         <title>
-          Fiber Installation Services | Utterlink - Lightning-Fast Internet
+          Fibre Installation Services | Utterlink - Lightning-Fast Internet
         </title>
         <meta
           name="description"
@@ -34,9 +34,32 @@ const FibreInstallation = () => {
         />
         <meta
           name="keywords"
-          content="fiber installation, fibre internet, high-speed internet, business fiber, residential fiber, network installation, Cape Town internet, fast internet"
+          content="fiber installation, fibre internet, high-speed internet, business fibre, residential fibre, network installation, Cape Town internet, fast internet"
+        />
+        <meta
+          property="og:title"
+          content="Fiber Installation Services | Utterlink - Lightning-Fast Internet"
+        />
+        <meta
+          property="og:description"
+          content="Get reliable fiber internet with professional installation by Utterlink in Cape Town. Perfect for homes and businesses."
+        />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/fibre-installation"
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/images/services/fibre.webp"
+        />
+
+        {/* ✅ Canonical URL */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/fibre-installation"
         />
       </Head>
+
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Hero Section */}

@@ -20,7 +20,51 @@ const CCTVInstallation = () => {
           name="keywords"
           content="CCTV installation, security cameras, surveillance systems, home security, business security, Cape Town security services"
         />
-        {/* You can add other SEO meta tags as needed */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/cctv-installation"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/cctv-installation"
+        />
+        <meta
+          property="og:title"
+          content="CCTV Installation Services | Utterlink"
+        />
+        <meta
+          property="og:description"
+          content="Protect what matters most with Utterlink's advanced surveillance systems and security camera installation services in Cape Town."
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/cctv-surveillance.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://utterlink.co.za/services/cctv-installation"
+        />
+        <meta
+          name="twitter:title"
+          content="CCTV Installation Services | Utterlink"
+        />
+        <meta
+          name="twitter:description"
+          content="Protect what matters most with Utterlink's advanced surveillance systems and security camera installation services in Cape Town."
+        />
+        <meta
+          name="twitter:image"
+          content="https://utterlink.co.za/cctv-surveillance.webp"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
       </Head>
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}

@@ -20,7 +20,51 @@ const AutomaticGates = () => {
           name="keywords"
           content="automatic gates, electric gates, gate automation, access control, security gates, driveway gates, Cape Town security services"
         />
-        {/* You can add other SEO meta tags as needed */}
+        <link
+          rel="canonical"
+          href="https://utterlink.co.za/services/automatic-gate.webp"
+        />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://utterlink.co.za/services/automatic-gates"
+        />
+        <meta
+          property="og:title"
+          content="Automatic Gates & Access Control | Utterlink"
+        />
+        <meta
+          property="og:description"
+          content="Enhance convenience and security with Utterlink's professional automatic gate installation and access control solutions in Cape Town."
+        />
+        <meta
+          property="og:image"
+          content="https://utterlink.co.za/automatic-gate.webp"
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:url"
+          content="https://utterlink.co.za/services/automatic-gates"
+        />
+        <meta
+          name="twitter:title"
+          content="Automatic Gates & Access Control | Utterlink"
+        />
+        <meta
+          name="twitter:description"
+          content="Enhance convenience and security with Utterlink's professional automatic gate installation and access control solutions in Cape Town."
+        />
+        <meta
+          name="twitter:image"
+          content="https://utterlink.co.za/automatic-gate.webp"
+        />
+
+        {/* Robots */}
+        <meta name="robots" content="index, follow" />
       </Head>
       <div className="bg-[#F5F5DC] py-20 md:py-24 lg:py-18">
         {/* Changed max-w-4xl to max-w-6xl for wider content on large screens */}

@@ -10,15 +10,45 @@ const About = () => {
   return (
     <>
       <Head>
-        <title>About Us | Utterlink - Connectivity & Security Solutions</title>
+        <title>
+          About Us | Utterlink - Connectivity & Security Experts in Cape Town
+        </title>
         <meta
           name="description"
-          content="Learn about Utterlink&rsquo;s journey, our mission to provide exceptional connectivity and security solutions, and the team behind our success."
+          content="Discover Utterlink's mission, values, and expert team. Since 2018, we’ve delivered fibre, WiFi, CCTV, electric fencing, and smart security systems across Cape Town."
         />
         <meta
           name="keywords"
-          content="about Utterlink, connectivity company, security solutions provider, Cape Town tech company"
+          content="Utterlink, about Utterlink, Cape Town tech company, connectivity experts Cape Town, security solutions Cape Town, WiFi installers, fibre installation, CCTV, electric fencing, smart home security"
         />
+        <meta name="author" content="Utterlink" />
+        <meta
+          property="og:title"
+          content="About Us | Utterlink - Connectivity & Security Experts in Cape Town"
+        />
+        <meta
+          property="og:description"
+          content="Since 2018, Utterlink has been providing fibre, WiFi, CCTV, electric fencing, and more. Learn about our journey and commitment to Cape Town."
+        />
+        <meta property="og:url" content="https://www.utterlink.co.za/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Utterlink" />
+        <meta
+          property="og:image"
+          content="https://www.utterlink.co.za/cctv-surveillance.webp"
+        />
+        <meta property="og:locale" content="en_ZA" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Us | Utterlink" />
+        <meta
+          name="twitter:description"
+          content="Learn about Utterlink’s journey and why we’re Cape Town’s trusted name for fibre, WiFi, CCTV, and smart security."
+        />
+        <meta
+          name="twitter:image"
+          content="https://www.utterlink.co.za/cctv-surveillance.webp"
+        />
+        <link rel="canonical" href="https://www.utterlink.co.za/about" />
       </Head>
       <div className="bg-[#F5F5DC] py-18 md:py-16 lg:py-18">
         <div className="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
