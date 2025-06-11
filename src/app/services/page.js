@@ -11,6 +11,7 @@ import {
   Cable,
   Zap,
   DoorOpen,
+  Lightbulb,
 } from "lucide-react";
 import Head from "next/head";
 
@@ -57,6 +58,14 @@ const services = [
       "Convenience and security with our automated gate systems and access control solutions.",
     icon: DoorOpen,
     link: "/services/automatic-gates",
+  },
+  ,
+  {
+    title: "Electrical Contractor & Maintenance", // New Service Title
+    description:
+      "Expert electrical services, from new installations to routine maintenance and repairs, ensuring safety and compliance.", // New Service Description
+    icon: Lightbulb, // New Service Icon
+    link: "/services/electrical-contractor", // New Service Link
   },
 ];
 

@@ -118,8 +118,8 @@ const FibreInstallation = () => {
                 className="rounded-lg overflow-hidden shadow-md border border-green-100"
               >
                 <Image
-                  src="/fiber-optic.jpg" // **IMPORTANT: Replace with your actual image path**
-                  alt="Fiber optic cables representing high-speed internet connection"
+                  src="/fibre.webp" // **IMPORTANT: Replace with your actual image path**
+                  alt="Internet Fibre"
                   width={500} // Adjust width/height as needed for your image aspect ratio
                   height={350}
                   className="object-cover w-full h-full"

@@ -11,9 +11,9 @@ import {
   Cable,
   Zap,
   DoorOpen,
+  Lightbulb, // Added Lightbulb icon for Electrical Contractor
 } from "lucide-react";
 
-// Services data with Lucide icon components
 const services = [
   {
     title: "Fibre Installation",
@@ -56,6 +56,13 @@ const services = [
       "Convenience and security with our automated gate systems and access control solutions.",
     icon: DoorOpen,
     link: "/services/automatic-gates",
+  },
+  {
+    title: "Electrical Contractor & Maintenance", // New Service Title
+    description:
+      "Expert electrical services, from new installations to routine maintenance and repairs, ensuring safety and compliance.", // New Service Description
+    icon: Lightbulb, // New Service Icon
+    link: "/services/electrical-contractor", // New Service Link
   },
 ];
 
